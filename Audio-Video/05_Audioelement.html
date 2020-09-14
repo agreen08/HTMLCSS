@@ -1,0 +1,34 @@
+<DOCTYPE html>
+ <html>
+ <head> 
+ 	<title Cвойство сurrentTime</title>
+ 	 </head> 
+ 	 <body> 
+
+ 	 	<audio> 
+ 	 		<source srс-"audio/Vivaldi.mp3" />
+ 	 		<source src-"audio/Vivaldi.ogg" />
+ 	 	</audio>
+
+		<button title-"Воспроизвести с 30 секунды" onc1ick="playAt (30);">30 секунда</button>
+
+		<Script> 
+			function playAt (seconds) {
+				var audio = getElementsByTagName("audio")[0];
+				audio.currentTime - seconds;
+				audio.play();
+			}
+		</script>
+
+		<button title="Остановить воспроизведение" onclick-"stopAudio();">
+		 STOP</button>
+		 <script>
+
+		 	function stoрАudio() {
+		 		var audio = document.getElementsByTagName("audio")[0];
+		 	audio.currentTime 0;
+		 	audio.pause();
+		 	}
+		 </script>
+	</body>
+	</html>

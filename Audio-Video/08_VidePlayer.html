@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Создание превью</title>
+</head>
+<body>
+<button title="Создать превью" onclick="generatePreview();">Создать превью< /button>
+<br />
+<video id="origVideo" width="640" height="360" style="border: 1px solid grey">
+<source src="video/vsvideo.mp4" />
+<source src="video/vsvideo.ogg" />
+<source src="video/vsvideo.webm" />
+</video>
+<br />
+<canvas id-"previewMed" style="border: 1px solid grey"></canvas>
+<canvas id="previewSn" style="border: 1px solid grey"></canvas>
+<script>
+function generatePreview() {
+var video = document.getElementById('origVideo');
+//получение контексна для работы с первым canvas
+var canvas1 = document.getElementById('previewMed');
+var context1 = canvas1.getContext('2d');
+//У получение контексла для работы со вторым сапvas
+var canvas2 = document.getElementById('previewSm');
+var context2 = canvas2.getContext("2d");
+
+// задаем размеры для обеих соnvas
+canvas1.width = 320;
+canvas1.height = 180;
+canvas2.width = 160;
+canvas2. height 90;
+// добавляет обработчик на собрание на тита воспроизведения Видео
+video.addEventListener('play', function () {
+drawVideo(this, contexti, context2);
+}, false);
+// запускаем видео
+video.play();
+}
+function drawVideo (video, canvas1, canvas2) {
+//еcli на видео на паузе ili завершенно не выполнен данную функцыно
+if (video.paused || video.ended) {
+return false;
+}
+// puсуси на пера сатпис 5 видео размером 320 т 180
+canvas1.drawІmage (video, 0, 0, 320, 100);
+//рисуемна втором canvas видно размером 160 * 90
+canvas2.drawImage(video, 0, 0, 160, 90);
+//планируем запуск функции drawVideo через 25 милисекунд передавая текущие значения праметров функции
+setTimeout(drawVideo, 25, video, canvas1, canvas2);
+}
+</script>
+body>
+<html>
