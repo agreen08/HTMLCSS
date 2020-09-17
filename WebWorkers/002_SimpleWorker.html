@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Web Worker</title>
+	<script type="text/javascript">
+		// создание потока
+		var worker = new Worker("task.js");
+
+		// Привязка обработчика на событие, которое будет возникать
+		worker.addEventListener("message", function (e) {
+			document.getEventlistener("output").innerHTML += "Otvet potoka: " + e.data;
+		}, true);
+
+		//
+		//
+		worker.postMessage("Hello world");
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
