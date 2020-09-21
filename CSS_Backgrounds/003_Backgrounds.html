@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title Определение нескольких фонов</title>
+	<style>
+		#Id1 {
+
+			/*
+				backgound-image мастет использоваться для задания нескольких фанов для одного блака.
+				фоны должны быть определены через запитую во всех сЅЅ свойствах относящихся к настройкая фоновых изображений,
+				Фон определенный в списке первым будет отобраться поверх остальные
+			*/
+
+			background-image: url(logo.png), url(bg.jpg);
+			background-position: bottom right, center;
+			background-repeat: no-repeat, no-repeat;
+
+			-moz-background-size: 135px 41px, 100% 100%;
+			-o-background-size: 135px 41px, 100% 100%;
+			-webkit-background-size: 135px 41px, 100% 100%;
+			background-size: 135px 41px, 100% 100%;
+
+			border: 1px #888889 solid;
+			height: 270px;
+			width: 35@px;
+		}
+	</style>
+</head>
+<body>
+	<div id="id1"></div>
+</body>
+</html>
