@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>content attr</title>
+	<style>
+		a{
+			text-decoration: none;
+		}
+
+			a::after {
+				/*
+					content: attr - Возвращает строку, которая является значением параметра нега указанного в скобках.
+					Например, атаftеr (concentrattr( href), добавит после ссылки её адрес, т.е. значение атрибута href.
+					Если указанного атрибута нет, вернется пустая строка.
+				*/
+				content: " (" attr(href) ")";
+			}
+	</style>
+</head>
+
+<body>
+
+	<a href="https://kutsehariduskeskus.ee/"> Video Lessons</a> <br  />
+	<a href="http://www.w3schools.com"> W3Schools</a><br />
+	<a href="http://www.google.com">Google search</a><br />
+
+</body>
+</html>
