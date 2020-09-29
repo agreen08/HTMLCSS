@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> selection</title>
+	<style>
+		/*
+			Псевдо элемент ::selection применяется стиль к выделенному тексту.
+			В правилах стилей допускается использовать следущие свойства: color, background u background-color.
+		*/
+		p::selection {
+			color: #ff0;
+			background: #000;
+		}
+	</style>
+</head>
+<body>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce vel sapien elit in malesuada semper mi, id sollicitudin urna
+		fermentum ut fusce varius nisl ac ipsum gravida vel pretium tellus.
+	</p>
+</body>
+</html>
