@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>:read-write</title>
+	<style>
+		/* элементы форм не доступные для редактирования (с атрибутом rеаdоnlу "rеаdоnlу") */
+		input:read-only {
+			opacity: 0.7;
+			border: 1px solid red;
+		}
+		/*элементы форм, которые поддерживакт редактирование */
+		input:read-write {
+			border: 2px solid green;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<p>
+			<input type="text" size="40" value="Введённый текст не может изменяться" readonly="readonly">
+		</p>
+		<p>
+			<input type="text" size="40" value="Этот текст может менятся">
+		</p>
+		<p>
+			<input type="submit" value="Отправить">
+		</p>
+	</form>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Enabled</title>
+	<script>
+		window.onload = function () {
+
+			var check = document.getElementById("check");
+
+			check.onclick = function () {
+				var sbmt = document.getElementById('form1');
+
+				if (check.checked) {
+					sbmt.sumbit.disabled = false;
+				}
+				else {
+					sbmt.sumbit.disabled = true;
+				}
+
+			}
+		}
+	</script>
+
+	<style>
+		
+		input:enabled {
+			background: green;
+		}
+	</style>
+
+</head>
+<body>
+	<form id="form1">
+		<p>
+			<input type="checkbox" name="agree" id="check">
+			Я согласен со всеми
+		</p>
+	</form>
+</body>
+</html>
