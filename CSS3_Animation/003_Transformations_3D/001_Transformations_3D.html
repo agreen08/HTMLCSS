@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Translate 3D</title>
+
+	<style>
+		td {
+			padding: 20px 5px 2px 50px;
+			border: 1px solid gray;
+		}
+
+		#img1 {
+			-moz-transform: translateX(30px);
+			-ms-transform: translateX(30px);
+			-o-transform: translateX(30px);
+			-webkit-transform: translateX(30px);
+			transform: translateX(30px);
+		}
+
+		#img2 {
+			-moz-transform: translateY(30px);
+			-ms-transform: translateY(30px);
+			-o-transform: translateY(30px);
+			-webkit-transform: translateY(30px);
+			transform: translateY(30px);
+		}
+
+		#img3 {
+			/* perspective(800px) - пределяет расстояние между зрителем и поверхностью на которой происходит трансформация */
+			-moz-transform: perspective(800px) translateZ(30px);
+			-ms-transform: perspective(800px) translateZ(30px);
+			-o-transform: perspective(800px) translateZ(30px);
+			-webkit-transform: perspective(800px) translateZ(30px);
+			transform: perspective(800px) translateZ(30px);
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>translateX(30)</td>
+			<td>translateY(30) </td>
+			<td>translateZ(80)</td>
+		</tr>
+		<tr>
+			<td>
+				<img id="img1" src="front.jpg" alt="King Of Hearts" />
+			</td>
+			<td>
+				<img id="img2" src="front.jpg" alt="King Of Hearts" />
+			</td>
+			<td>
+				<img id="img3" src="front.jpg" alt="King Of Hearts" />
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
